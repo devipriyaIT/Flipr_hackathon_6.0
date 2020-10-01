@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>COVID 19</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header style="width: 100%;height:150px"> 
+<img src="image/banner1.jpg" alt=""  style="width: 100%;height: 150px;"  >
+	</header>
+	<marquee direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" class="m1">
+		Maintain social distancing <==>
+		Boost your immune system <==>
+		 Disinfect your belongings <==>
+		Practice respiratory hygiene while coughing or sneezing <==>
+		Wash your hands frequently the right way <==>
+		Avoid touching your eyes, nose, and mouth <==>
+	If you have fever, cough, and difficulty breathing, seek medical care early <==>
+		#Stay Home #Stay safe #Stay Positive 
+	</marquee>
+
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="accordion">
+					<button type="button" class="question">What is a coronavirus ?</button>
+<div class="answer">
+	<p>
+		Coronaviruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19.
+	</p>
+</div>
+	<button type="button" class="question">What is a COVID 19 ?</button>
+<div class="answer">
+	<p>
+	COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019. COVID-19 is now a pandemic affecting many countries globally.
+	</p>
+</div>
+<button type="button" class="question">
+                                What are the symptoms of COVID-19?
+                            </button>
+<div class="answer">
+	<p>
+	The most common symptoms of COVID-19 are fever, dry cough, and tiredness. Other symptoms that are less common and may affect some patients include aches and pains, nasal congestion, headache, conjunctivitis, sore throat, diarrhea, loss of taste or smell or a rash on skin or discoloration of fingers or toes. These symptoms are usually mild and begin gradually. Some people become infected but only have very mild symptoms.
+
+Most people (about 80%) recover from the disease without needing hospital treatment. Around 1 out of every 5 people who gets COVID-19 becomes seriously ill and develops difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart and lung problems, diabetes, or cancer, are at higher risk of developing serious illness.  However, anyone can catch COVID-19 and become seriously ill.  People of all ages who experience fever and/or  cough associated withdifficulty breathing/shortness of breath, chest pain/pressure, or loss of speech or movement should seek medical attention immediately. If possible, it is recommended to call the health care provider or facility first, so the patient can be directed to the right clinic
+	</p>
+</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="text-center">
+					<h3 style="color: blue"><u>Confirmed  Cases :</u></h3>
+					<div id ="total">
+						
+					</div>	
+					<h3 style="color: blue"><u>Active Cases :</u></h3>
+					<div id ="active">
+						
+					</div>
+                   <h3 style="color: blue"><u>Recovered Cases :</u></h3>
+						<div id ="recover">
+						
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		<p></p>
+		<div class="row d-flex justify-content-center ">
+			<div class="col-md-3">
+				<div class="card shadow" style="width: auto;height:21rem;">
+					<div class="inner">
+						
+  <img src="image/helpline.jpg" style="height: 7rem;"class="card-img-top" alt="HELPLINE">
+					</div>
+  <div class="card-body text-center">
+    <h5 class="card-title">Contact & Helpline Information</h5>
+    <p class="card-text">India Helpline Number: List of Centre & State Phone Numbers for COVID-19</p>
+    <button class="btn btn-primary" onclick="helpline()">View More..</button>
+  </div>
+</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="card shadow" style="width: ato;height: 21rem">
+					<div class="inner">
+						
+  <img src="image/hospital.jpg" style="height: 7rem;" class="card-img-top" alt="HOSPITAL">
+					</div>
+  <div class="card-body text-center">
+    <h5 class="card-title">Hospitals Dashboards</h5>
+    <p class="card-text">The researchers estimated that India has approximately 1.9 million hospital beds, 95 thousand ICU beds, and 48 thousand ventilators.</p>
+     <button class="btn btn-primary" onclick="hospital()">View More..</button>
+  </div>
+</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="card shadow" style="width: ato;height: 21rem">
+					<div class="inner">
+						
+  <img src="image/notify.jpg" style="height: 7rem;" class="card-img-top" alt="NOTIFICATION">
+					</div>
+  <div class="card-body text-center">
+    <h5 class="card-title">Notifications </h5>
+    <p class="card-text">The coronavirus situation is changing fast. Get alerts on your phone to stay informed</p>
+   <button class="btn btn-primary" onclick="notify()">View More..</button>
+  </div>
+</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		document.querySelectorAll('.question').forEach(button =>{
+			button.addEventListener('click',function(){
+          const c=button.nextElementSibling;
+          button.classList.toggle('question--active');
+
+          if(button.classList.contains('question--active'))
+          	c.style.maxHeight=c.scrollHeight+'px';
+          else
+          	c.style.maxHeight=0;
+			})
+		});
+		
+		
+
+	</script>
+	<script>
+		
+	</script>
+	<div class="row justify-content-center" id="viewing">
+			<div class="col-md-5">
+				<div id='first'>
+					
+				</div>
+	
+</div>
+	</div>
+	<div class="row justify-content-center" id="viewing">
+			<div class="col-md-5">
+				<div id='second'>
+					
+				</div>
+	
+</div>
+	</div>
+
+	
+<script>
+	function helpline()
+	{
+		var j="<div class=\"divbox\"><div id=\"parg\"><h3 style=\"text-align: center;\"><u>Contact & Helpline Information</u></h3><p>The COVID-19 lockdown in India esulted nto a sense of uncertainty and panic among the people. Considering this, the Central Government as well as all the state governments have launched COVID-19 dedicated helpline numbers to help people safeguard themselves against the highly infectious virus</p>	<p>Coronavirus Helpline Number India: Get here full list of phone numbers of central as well as State Governments to get information or any help on COVID-19 pandemic.</p></div><table id=\"table\" style=\"table-layout: fixed; width: 100%\"></table></div>";
+		document.getElementById('first').innerHTML=j;
+	var parg="";
+	var temp1="<div></div>";
+	document.getElementById('second').innerHTML=temp1;
+	var temp="<thead><tr><th>S.No</th><th>State Name</th><th>Helpline Number</th></tr></thead><tbody>";
+	
+fetch('https://api.rootnet.in/covid19-in/contacts')
+    .then(res => res.json())
+    .then((out) => {
+    	if(out.data.contacts.regional.length>0)
+    	{
+    		var c=0;
+    		out.data.contacts.regional.forEach((a)=>{
+    			temp+='<tr>';
+    			temp+='<td style=\"word-wrap: break-word\">'+(++c)+'</td>';
+    			temp+='<td style=\"word-wrap: break-word\">'+a.loc+'</td>';
+    			temp+='<td style=\"word-wrap: break-word\">'+a.number+'</td>';
+    			temp+='</tr>';
+    		})
+    		temp+='</tbody>';
+    		  	
+    		document.getElementById('table').innerHTML=temp;
+    	}
+        console.log('Output: ', out.data.contacts.regional);
+}).catch(err => console.error(err));
+    console.log(temp);
+}
+function hospital()
+	{
+		var j="<div class=\"divbox\"><div id=\"parg\"><h3 style=\"text-align: center;\"><u>Hospitals & beds </u></h3><p>COVID-19 in India : State-wise estimates of current hospital beds, intensive care unit (ICU) beds and ventilators</p>	</div><table id=\"table\" style=\" width: 100%\"></table></div>";
+		var j1="<div class=\"divbox\"><div id=\"parg\"><h3 style=\"text-align: center;\"><u>Medical Colleges & beds</u></h3><p> Due to the rise in the number of COVID-19 cases .The state government anticipating requirement of beds to treat coronavirus positive patients reached out to the private medical colleges.The private medical colleges agreed to the government’s demands to allocate  beds for treating COVID-19 positive patients</p>	</div><input type=\"text\" id=\"myInput\" onkeyup=\"myFunction()\" placeholder=\"Search for States..\" title=\"Type in a name\"><table id=\"table1\" style=\" width: 100%\"></table></div>";
+		document.getElementById('first').innerHTML=j;
+		document.getElementById('second').innerHTML=j1;
+	var parg="";
+	var temp="<thead><tr><th>State Name </th><th>Rural Hospitals</th><th>Rural Beds </th><th>Urban Hospitals </th><th>Urban Beds</th><th>Total Hospitals</th><th>Total Beds</th></tr></thead><tbody>";
+
+var temp1="<thead><tr><th>State Name </th><th>Institute Name </th><th>City </th><th>Type</th><th>Admission Capacity</th><th>Hospital Beds</th></tr></thead><tbody>";
+//first
+fetch('https://api.rootnet.in/covid19-in/hospitals/beds')
+    .then(res => res.json())
+    .then((out) => {
+    	if(out.data.regional.length>0)
+    	{
+    		
+    		out.data.regional.forEach((a)=>{
+    			temp+='<tr>';
+    			temp+='<td >'+a.state+'</td>';
+    			temp+='<td >'+a.ruralHospitals+'</td>';
+    			temp+='<td >'+a.ruralBeds+'</td>';
+    			temp+='<td >'+a.urbanHospitals+'</td>';
+    			temp+='<td >'+a.urbanBeds+'</td>';
+    			temp+='<td >'+a.totalHospitals+'</td>';
+    			temp+='<td >'+a.totalBeds+'</td>';
+    			temp+='</tr>';
+    		})
+    		
+    			temp+='<tr>';
+    			temp+='<td > <b>Total Summary(INDIA) </b></td>';
+    			temp+='<td ><b>'+out.data.summary.ruralHospitals+'</b></td>';
+    			temp+='<td ><b>'+out.data.summary.ruralBeds+'</b></td>';
+    			temp+='<td ><b>'+out.data.summary.urbanHospitals+'</b></td>';
+    			temp+='<td ><b>'+out.data.summary.urbanBeds+'</b></td>';
+    			temp+='<td ><b>'+out.data.summary.totalHospitals+'</b></td>';
+    			temp+='<td ><b>'+out.data.summary.totalBeds+'</b></td>';
+    			temp+='</tr>';
+    		
+    		temp+='</tbody>';
+    		  	
+    		document.getElementById('table').innerHTML=temp;
+    	}
+
+        console.log('Output: ', out.data.regional);
+}).catch(err => console.error(err));
+    console.log(temp);
+//second
+    fetch('https://api.rootnet.in/covid19-in/hospitals/medical-colleges')
+    .then(res => res.json())
+    .then((out) => {
+    	if(out.data.medicalColleges.length>0)
+    	{
+    		var c=0;
+    		out.data.medicalColleges.forEach((a)=>{
+    			temp1+='<tr>';
+    			temp1+='<td style=\"word-wrap: break-word\">'+a.state+'</td>';
+    			temp1+='<td style=\"word-wrap: break-word\">'+a.name+'</td>';
+    			temp1+='<td style=\"word-wrap: break-word\">'+a.city+'</td>';
+    			temp1+='<td style=\"word-wrap: break-word\">'+a.ownership+'</td>';
+    			temp1+='<td style=\"word-wrap: break-word\">'+a.admissionCapacity+'</td>';
+    			temp1+='<td style=\"word-wrap: break-word\">'+a.hospitalBeds+'</td>';
+    			temp1+='</tr>';
+    		})
+    		temp1+='</tbody>';
+    		  	
+    		document.getElementById('table1').innerHTML=temp1;
+    	}
+        console.log('Output: ', out.data.medicalColleges);
+}).catch(err => console.error(err));
+    console.log(temp1);
+    
+}
+
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table1");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+function notify()
+	{
+		var j="<div class=\"divbox\"><div id=\"parg\"><h3 style=\"text-align: center;\"><u>Notifications & advisories</u></h3><p>Stop missing important updates about how COVID-19 is affecting your country and where you live.</p></div><table id=\"table\" style=\"table-layout: fixed; width: 100%\"></table></div>";
+		document.getElementById('first').innerHTML=j;
+	var parg="";
+	var temp="<thead><tr><th>Date </th><th>Notification Title</th><th>Link</th></tr></thead><tbody>";
+	var temp1="<div></div>";
+	document.getElementById('second').innerHTML=temp1;
+fetch('https://api.rootnet.in/covid19-in/notifications')
+    .then(res => res.json())
+    .then((out) => {
+    	if(out.data.notifications.length>0)
+    	{
+    		var c=0;
+    		out.data.notifications.forEach((a)=>{
+    			var x=a.title;
+    			if(x.length>5 && !(x.includes(';')))
+    			{
+    				var t=x.split(" ");
+    				var s='';
+    				for(var i=1;i<t.length;i++)
+    				{
+    					s+=t[i];
+    				}
+    			temp+='<tr>';
+    			temp+='<td style=\"word-wrap: break-word\">'+t[0]+'</td>';
+    			temp+='<td style=\"word-wrap: break-word\">'+s+'</td>';
+    			temp+='<td style=\"word-wrap: break-word\"><a href='+a.link+' target=\" \">'+a.link+'</a></td>';
+    			temp+='</tr>';
+    		    }
+    		})
+    		temp+='</tbody>';
+    		  	
+    		document.getElementById('table').innerHTML=temp;
+    	}
+        console.log('Output: ', out.data.notifications);
+}).catch(err => console.error(err));
+    console.log(temp);
+}
+</script>
+<script type="text/javascript">
+	var total_case,confirm_case,recovered;
+	fetch('https://api.covidindiatracker.com/total.json')
+    .then(res => res.json())
+    .then((out) => {
+    	
+    			total_case=out.confirmed;
+    			confirm_case=out.active;
+    			recovered=out.recovered;
+    			
+    		  	document.getElementById('total').innerHTML='<h4>'+total_case+'</h4>';
+    		  	document.getElementById('active').innerHTML='<h4>'+confirm_case+'</h4>';
+    		  	document.getElementById('recover').innerHTML='<h4>'+recovered+'</h4>';
+    		//window.alert(total_case,recovered,confirm_case);
+    	
+    	//window.alert(total_case,recovered,confirm_case);
+        console.log("s",total_case);
+}).catch(err => console.error(err));
+   // console.log(res);
+</script>
+<p>
+	<div class="row justify-content-center">	
+<div class="instruction">
+	<h3 style="text-align: center;"><u>Precautions and Guidelines</u></h3>
+	<ul>
+		<li>
+Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water. Why? Washing your hands with soap and water or using alcohol-based hand rub kills viruses that may be on your hands.</li><li>
+Maintain at least 1 metre (3 feet) distance between yourself and others. Why? When someone coughs, sneezes, or speaks they spray small liquid droplets from their nose or mouth which may contain virus. If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person has the disease.</li><li>
+Avoid going to crowded places. Why? Where people come together in crowds, you are more likely to come into close contact with someone that has COVID-19 and it is more difficult to maintain physical distance of 1 metre (3 feet).</li><li>
+Governments should encourage the general public to wear a fabric mask if there is widespread community transmission, and especially where physical distancing cannot be maintained. Why? Masks are a key tool in a comprehensive approach to the fight against COVID-19. For more public advice on masks, read our Q&A and watch our videos."</li><li>
+Avoid touching eyes, nose and mouth. Why? Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. From there, the virus can enter your body and infect you.</li></ul>
+</div>
+</div>
+</p>
+
+<div class="foot">
+	<h4 style="text-align: center;"><u>Contact Us</u></h3>
+		<h5 class="mailcheck" style="text-align: center;"><a href="mailto:dhanadsp1120@gmail.com">dhanadspprojects@gmail.com</a></h5>
+ <h5 style="text-align: center;">
+ 	<p>
+  <a href="mailto:devipriyait5s@gmail.com">devipriyait5s@gmail.com</a></h5>
+  </p>
+<p></p>
+	</div>
+	<p>
+
+		<p>
+</body>
+</html>
